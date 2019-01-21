@@ -159,11 +159,7 @@ namespace WindowsFormsApplication1
 
         #region  串口
 
-        private void button53_Click(object sender, EventArgs e)
-        {
-            textBox2.TabIndex = 0;
-            textBox2.Focus();
-        }
+
 
         /// <summary>
         /// 打开串口
@@ -351,20 +347,9 @@ namespace WindowsFormsApplication1
                 sm3 = content;
 
             }
-
-
-
         }
 
-        /// <summary>
-        /// 清空接收区
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnClearRev_Click(object sender, EventArgs e)
-        {
-            txtShowData.Clear();
-        }
+
 
         #endregion
 
@@ -1024,7 +1009,7 @@ namespace WindowsFormsApplication1
 
                     gap17 = msgS[7]; //相机位置
                     string str23 = gap17;
-                    string[] sArray23 = Regex.Split(str23, ",", RegexOptions.IgnoreCase);
+                 
 
                     //监控设定冲数，右安全位置，手臂高度
                     if (sArray17[1] != "0" && sArray17[1] != "" && sArray21[1] != "0" && sArray21[1] != "" &&
@@ -1400,44 +1385,7 @@ namespace WindowsFormsApplication1
 
         #endregion
 
-        #region 启动
 
-        /// <summary>
-        /// 接收到启动命令
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-
-
-        //private void numericUpDown8_ValueChanged(object sender, EventArgs e)
-        //{
-        //    if (Convert.ToInt32(numericUpDown8.Value) > 1)
-        //    {
-        //        numericUpDown8.Value = 1;
-        //        //numericUpDown8.Text = "1";
-        //        MessageBox.Show("设置冲数超过最大值，请重新设置！", "错误提示");
-
-        //    }
-
-        //}
-
-        private void numericUpDown12_ValueChanged(object sender, EventArgs e)
-        {
-            //计算暂停
-            //         //PcConnectPlc.Write_Data_FxCom("D808", Convert.ToInt32(numericUpDown12.Value));
-        }
-
-
-
-        private void button50_Click(object sender, EventArgs e)
-        {
-            //计数暂停清零
-            //       //PcConnectPlc.Write_Data_FxCom("D56", 0);
-
-        }
-
-
-        #endregion
 
         #region 报警提示
 
@@ -1993,7 +1941,7 @@ namespace WindowsFormsApplication1
         {
             //新建文档 写入数据
             List<string> msgL = new List<string>();
-            List<string> msgLc = new List<string>();
+           
             try
             {
                 FileOperate.OpenFileList(filePathNow, out msgL);
@@ -2338,8 +2286,7 @@ namespace WindowsFormsApplication1
                         Batch = PH_textbox.Text;
                         DataSet yy = webFun.getDataFromSer(serverAccount, serverPwd, "#01", "0001", "0009",
                             Batch + "|SFCZ1_ZD_PunchCut|" + Lay, System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
-                        textBox2.Text = Batch + Lay;
-
+                     
                         if (yy.Tables[0].Rows.Count > 0)
                         {
 
@@ -2532,8 +2479,7 @@ namespace WindowsFormsApplication1
                                                 DataSet yy = webFun.getDataFromSer(serverAccount, serverPwd, "#01",
                                                     "0001", "0009", Batch + "|SFCZ1_ZD_PunchCut|" + Lay,
                                                     System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
-                                                textBox2.Text = Batch + Lay;
-
+                                             
                                                 if (yy.Tables[0].Rows.Count > 0)
                                                 {
 
@@ -4139,7 +4085,7 @@ namespace WindowsFormsApplication1
                 //时间机号显示
                 Scan_textbox.Text = txtShowData.Text;
 
-                label207.Text = DateTime.Now.ToString(); //时间显示
+            
 
                 Machine_id_textbox.Text = machineidentifier; //机台编号
 
@@ -4346,12 +4292,7 @@ namespace WindowsFormsApplication1
 
         }
 
-        private void button78_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
+  
 
 
     }

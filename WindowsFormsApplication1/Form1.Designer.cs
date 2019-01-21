@@ -55,12 +55,8 @@
             this.skinTabPage1 = new CCWin.SkinControl.SkinTabPage();
             this.skinTabControl2 = new CCWin.SkinControl.SkinTabControl();
             this.skinTabPage17 = new CCWin.SkinControl.SkinTabPage();
-            this.button53 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button78 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnSend = new System.Windows.Forms.Button();
-            this.btnClearRev = new System.Windows.Forms.Button();
             this.lblSendCount = new System.Windows.Forms.Label();
             this.btnOpen = new System.Windows.Forms.Button();
             this.lblSend = new System.Windows.Forms.Label();
@@ -309,7 +305,7 @@
             this.label94 = new System.Windows.Forms.Label();
             this.label93 = new System.Windows.Forms.Label();
             this.Model2_textBox1 = new System.Windows.Forms.TextBox();
-            this.button101 = new System.Windows.Forms.Button();
+            this.Search_btn = new System.Windows.Forms.Button();
             this.label309 = new System.Windows.Forms.Label();
             this.Start_btn = new System.Windows.Forms.Button();
             this.label296 = new System.Windows.Forms.Label();
@@ -600,9 +596,6 @@
             // 
             this.skinTabPage17.BackColor = System.Drawing.Color.White;
             this.skinTabPage17.BorderColor = System.Drawing.Color.Maroon;
-            this.skinTabPage17.Controls.Add(this.button53);
-            this.skinTabPage17.Controls.Add(this.textBox2);
-            this.skinTabPage17.Controls.Add(this.button78);
             this.skinTabPage17.Controls.Add(this.groupBox3);
             this.skinTabPage17.Controls.Add(this.panel2);
             this.skinTabPage17.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -613,44 +606,10 @@
             this.skinTabPage17.TabItemImage = null;
             this.skinTabPage17.Text = "通信";
             // 
-            // button53
-            // 
-            this.button53.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button53.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
-            this.button53.Location = new System.Drawing.Point(370, 160);
-            this.button53.Name = "button53";
-            this.button53.Size = new System.Drawing.Size(92, 43);
-            this.button53.TabIndex = 56;
-            this.button53.Text = "扫描聚焦";
-            this.button53.UseVisualStyleBackColor = true;
-            this.button53.Click += new System.EventHandler(this.button53_Click);
-            // 
-            // textBox2
-            // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.textBox2.Location = new System.Drawing.Point(357, 8);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(145, 135);
-            this.textBox2.TabIndex = 136;
-            // 
-            // button78
-            // 
-            this.button78.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button78.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
-            this.button78.Location = new System.Drawing.Point(370, 209);
-            this.button78.Name = "button78";
-            this.button78.Size = new System.Drawing.Size(92, 43);
-            this.button78.TabIndex = 57;
-            this.button78.Text = "确定";
-            this.button78.UseVisualStyleBackColor = true;
-            this.button78.Click += new System.EventHandler(this.button78_Click);
-            // 
             // groupBox3
             // 
             this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.groupBox3.Controls.Add(this.btnSend);
-            this.groupBox3.Controls.Add(this.btnClearRev);
             this.groupBox3.Controls.Add(this.lblSendCount);
             this.groupBox3.Controls.Add(this.btnOpen);
             this.groupBox3.Controls.Add(this.lblSend);
@@ -672,17 +631,6 @@
             this.btnSend.Text = "手动发送";
             this.btnSend.UseVisualStyleBackColor = true;
             this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
-            // 
-            // btnClearRev
-            // 
-            this.btnClearRev.Font = new System.Drawing.Font("宋体", 10F);
-            this.btnClearRev.Location = new System.Drawing.Point(111, 22);
-            this.btnClearRev.Name = "btnClearRev";
-            this.btnClearRev.Size = new System.Drawing.Size(87, 32);
-            this.btnClearRev.TabIndex = 11;
-            this.btnClearRev.Text = "清空接收区";
-            this.btnClearRev.UseVisualStyleBackColor = true;
-            this.btnClearRev.Click += new System.EventHandler(this.btnClearRev_Click);
             // 
             // lblSendCount
             // 
@@ -3141,7 +3089,7 @@
             this.skinGroupBox23.Controls.Add(this.label94);
             this.skinGroupBox23.Controls.Add(this.label93);
             this.skinGroupBox23.Controls.Add(this.Model2_textBox1);
-            this.skinGroupBox23.Controls.Add(this.button101);
+            this.skinGroupBox23.Controls.Add(this.Search_btn);
             this.skinGroupBox23.Controls.Add(this.label309);
             this.skinGroupBox23.Controls.Add(this.Start_btn);
             this.skinGroupBox23.Controls.Add(this.label296);
@@ -3631,17 +3579,17 @@
             this.Model2_textBox1.TabIndex = 206;
             this.Model2_textBox1.Click += new System.EventHandler(this.textBox24_Click);
             // 
-            // button101
+            // Search_btn
             // 
-            this.button101.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.button101.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button101.Location = new System.Drawing.Point(11, 271);
-            this.button101.Name = "button101";
-            this.button101.Size = new System.Drawing.Size(52, 32);
-            this.button101.TabIndex = 218;
-            this.button101.Text = "搜索";
-            this.button101.UseVisualStyleBackColor = true;
-            this.button101.Click += new System.EventHandler(this.button101_Click);
+            this.Search_btn.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.Search_btn.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Search_btn.Location = new System.Drawing.Point(11, 271);
+            this.Search_btn.Name = "Search_btn";
+            this.Search_btn.Size = new System.Drawing.Size(52, 32);
+            this.Search_btn.TabIndex = 218;
+            this.Search_btn.Text = "搜索";
+            this.Search_btn.UseVisualStyleBackColor = true;
+            this.Search_btn.Click += new System.EventHandler(this.button101_Click);
             // 
             // label309
             // 
@@ -3830,7 +3778,6 @@
             this.skinTabPage1.ResumeLayout(false);
             this.skinTabControl2.ResumeLayout(false);
             this.skinTabPage17.ResumeLayout(false);
-            this.skinTabPage17.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -3902,12 +3849,8 @@
         private CCWin.SkinControl.SkinTabPage skinTabPage1;
         private CCWin.SkinControl.SkinTabControl skinTabControl2;
         private CCWin.SkinControl.SkinTabPage skinTabPage17;
-        private System.Windows.Forms.Button button53;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button78;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnSend;
-        private System.Windows.Forms.Button btnClearRev;
         private System.Windows.Forms.Label lblSendCount;
         private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.Label lblSend;
@@ -4129,7 +4072,7 @@
         private System.Windows.Forms.Label label93;
         private System.Windows.Forms.Label label367;
         private System.Windows.Forms.TextBox Model2_textBox1;
-        private System.Windows.Forms.Button button101;
+        private System.Windows.Forms.Button Search_btn;
         private System.Windows.Forms.Label label309;
         private System.Windows.Forms.Button Start_btn;
         private System.Windows.Forms.Label label296;
