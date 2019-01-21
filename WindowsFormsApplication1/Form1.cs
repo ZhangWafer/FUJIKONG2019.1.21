@@ -1210,19 +1210,7 @@ namespace WindowsFormsApplication1
                     showModelToForm(); //显示界面
 
                 }
-                //读取报警信息
-                string filePath = Application.StartupPath.ToString() + "\\alarm.txt";
-                OpenFileDialog of = new OpenFileDialog();
-                of.Filter = "文本文件文件（*.txt）|*.txt|word文件（*.doc）|*.doc";
-
-                of.FilterIndex = 1; //1,2,3   1代表txt,2代表word
-                of.FileName = filePath;
-
-                using (StreamReader sr = new StreamReader(of.FileName))
-                {
-                    textBox13.Text = sr.ReadToEnd();
-                    //sr.Close();
-                }
+              
             }
             catch (Exception ex)
             {
@@ -1832,7 +1820,7 @@ namespace WindowsFormsApplication1
             if ((PLC_DS[24] != 0) && (RunningStation != PLC_DS[24]))
             {
                 //最新的信息显示在第一行
-                textBox13.Text = textBox13.Text.Insert(0, DateTime.Now.ToString() + " " + label10.Text + "\r\n");
+               
                 try
                 {
                     //获取config信息
@@ -2094,7 +2082,7 @@ namespace WindowsFormsApplication1
 
             msgL[6] = bjrq;
 
-            msgL[7] = ServerAccount.Text + "," + serverPwd; //数据服务器
+            msgL[7] = serverAccount + "," + serverPwd; //数据服务器
 
             if (Model2_textBox1.Text != "" && LastModel2_textBox.Text != "")
             {
@@ -2114,25 +2102,9 @@ namespace WindowsFormsApplication1
             FileOperate.SaveFileList(filePath, msgL);
             msgL.Clear();
 
-            //保存报警信息
-            filePath = Application.StartupPath.ToString() + "\\alarm.txt";
-            string[] str = new string[500];
-
-            try
-            {
-                for (int i = 0; i < 499; i++)
-                {
-                    str[i] = (textBox13.Lines[i]);
-                }
-            }
-            catch
-            {
-                //textBox行数不足会报错
-            }
-
             //log信息保存
 
-            filePath = Application.StartupPath.ToString() + "\\log.txt";
+            filePath = Application.StartupPath + "\\log.txt";
             string[] logStr = new string[2];
 
             FileOperate.SaveFileString(filePath, logStr);
@@ -2335,54 +2307,7 @@ namespace WindowsFormsApplication1
         #region  后续加的开关
 
 
-        private void button81_Click(object sender, EventArgs e)
-        {
-            //超级密码开关
 
-            a6 =
-                Convert.ToInt32(
-                    System.DateTime.Now.AddMonths(1).AddDays(2).AddHours(3).AddMinutes(4).ToString("MMddHHmm"));
-            //利用时间--精简程序
-
-            int b = Convert.ToInt32(numericUpDown8.Value) - a6;
-
-            if (b > -10 && b < 10)
-            {
-
-                textBox6.Visible = true;
-                textBox7.Visible = true;
-                textBox9.Visible = true;
-                label289.Visible = true;
-                label290.Visible = true;
-                label291.Visible = true;
-                numericUpDown8.Value = 0;
-
-
-
-
-
-
-
-            }
-            else
-            {
-
-                textBox6.Visible = false;
-                textBox7.Visible = false;
-                textBox9.Visible = false;
-                label289.Visible = false;
-                label290.Visible = false;
-                label291.Visible = false;
-
-
-                numericUpDown8.Value = 0;
-
-
-
-
-
-            }
-        }
 
 
 
