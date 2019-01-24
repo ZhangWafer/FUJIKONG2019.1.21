@@ -2949,7 +2949,7 @@
             this.Audit_textBox.Size = new System.Drawing.Size(135, 35);
             this.Audit_textBox.TabIndex = 205;
             this.Audit_textBox.Visible = false;
-            this.Audit_textBox.Click += new System.EventHandler(this.textBox25_Click);
+            this.Audit_textBox.Click += new System.EventHandler(this.Audit_Click);
             // 
             // label5
             // 
