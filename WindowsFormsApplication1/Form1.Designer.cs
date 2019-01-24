@@ -55,11 +55,6 @@
             this.skinTabPage1 = new CCWin.SkinControl.SkinTabPage();
             this.skinTabControl2 = new CCWin.SkinControl.SkinTabControl();
             this.skinTabPage17 = new CCWin.SkinControl.SkinTabPage();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnSend = new System.Windows.Forms.Button();
-            this.lblSendCount = new System.Windows.Forms.Label();
-            this.btnOpen = new System.Windows.Forms.Button();
-            this.lblSend = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtShowData = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -98,39 +93,14 @@
             this.label347 = new System.Windows.Forms.Label();
             this.ScanSum_textbox = new System.Windows.Forms.TextBox();
             this.label319 = new System.Windows.Forms.Label();
-            this.skinGroupBox38 = new CCWin.SkinControl.SkinGroupBox();
-            this.DelayTime_textbox = new System.Windows.Forms.TextBox();
-            this.HoleNums_textbox = new System.Windows.Forms.TextBox();
-            this.TensionPower_textbox = new System.Windows.Forms.TextBox();
-            this.MoveSpeed_textbox = new System.Windows.Forms.TextBox();
-            this.TurnPagesNum_textbox = new System.Windows.Forms.TextBox();
-            this.GetThingSpeed_textBox = new System.Windows.Forms.TextBox();
-            this.EveryRowRealNum_textbox = new System.Windows.Forms.TextBox();
-            this.EmptyNums_textbox = new System.Windows.Forms.TextBox();
-            this.EveryRowProdution_textbox = new System.Windows.Forms.TextBox();
-            this.Online_textbox = new System.Windows.Forms.TextBox();
-            this.label370 = new System.Windows.Forms.Label();
-            this.label371 = new System.Windows.Forms.Label();
-            this.label372 = new System.Windows.Forms.Label();
-            this.label373 = new System.Windows.Forms.Label();
-            this.label374 = new System.Windows.Forms.Label();
-            this.label375 = new System.Windows.Forms.Label();
-            this.label376 = new System.Windows.Forms.Label();
-            this.label377 = new System.Windows.Forms.Label();
-            this.label378 = new System.Windows.Forms.Label();
-            this.label379 = new System.Windows.Forms.Label();
             this.skinGroupBox35 = new CCWin.SkinControl.SkinGroupBox();
             this.JudgeModel_height_textbox = new System.Windows.Forms.TextBox();
             this.ScanPosition2_textbox = new System.Windows.Forms.TextBox();
-            this.CamPosition2_textbox = new System.Windows.Forms.TextBox();
             this.ScanPosition1_textbox = new System.Windows.Forms.TextBox();
             this.HandHeight_textbox = new System.Windows.Forms.TextBox();
             this.label335 = new System.Windows.Forms.Label();
-            this.CamPosition1_textbox = new System.Windows.Forms.TextBox();
             this.label336 = new System.Windows.Forms.Label();
             this.label327 = new System.Windows.Forms.Label();
-            this.label334 = new System.Windows.Forms.Label();
-            this.label333 = new System.Windows.Forms.Label();
             this.label330 = new System.Windows.Forms.Label();
             this.skinGroupBox34 = new CCWin.SkinControl.SkinGroupBox();
             this.Get_thing_hight_textbox = new System.Windows.Forms.TextBox();
@@ -234,10 +204,7 @@
             this.label360 = new System.Windows.Forms.Label();
             this.label361 = new System.Windows.Forms.Label();
             this.skinGroupBox29 = new CCWin.SkinControl.SkinGroupBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.label306 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label344 = new System.Windows.Forms.Label();
             this.label95 = new System.Windows.Forms.Label();
@@ -323,13 +290,11 @@
             this.skinTabPage1.SuspendLayout();
             this.skinTabControl2.SuspendLayout();
             this.skinTabPage17.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.skinTabPage6.SuspendLayout();
             this.skinGroupBox4.SuspendLayout();
             this.skinGroupBox3.SuspendLayout();
-            this.skinGroupBox38.SuspendLayout();
             this.skinGroupBox35.SuspendLayout();
             this.skinGroupBox34.SuspendLayout();
             this.skinGroupBox33.SuspendLayout();
@@ -596,7 +561,6 @@
             // 
             this.skinTabPage17.BackColor = System.Drawing.Color.White;
             this.skinTabPage17.BorderColor = System.Drawing.Color.Maroon;
-            this.skinTabPage17.Controls.Add(this.groupBox3);
             this.skinTabPage17.Controls.Add(this.panel2);
             this.skinTabPage17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.skinTabPage17.Location = new System.Drawing.Point(0, 36);
@@ -605,61 +569,6 @@
             this.skinTabPage17.TabIndex = 13;
             this.skinTabPage17.TabItemImage = null;
             this.skinTabPage17.Text = "通信";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox3.Controls.Add(this.btnSend);
-            this.groupBox3.Controls.Add(this.lblSendCount);
-            this.groupBox3.Controls.Add(this.btnOpen);
-            this.groupBox3.Controls.Add(this.lblSend);
-            this.groupBox3.Font = new System.Drawing.Font("宋体", 10F);
-            this.groupBox3.Location = new System.Drawing.Point(13, 179);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(338, 105);
-            this.groupBox3.TabIndex = 54;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "数据发送区";
-            // 
-            // btnSend
-            // 
-            this.btnSend.Font = new System.Drawing.Font("宋体", 10F);
-            this.btnSend.Location = new System.Drawing.Point(215, 23);
-            this.btnSend.Name = "btnSend";
-            this.btnSend.Size = new System.Drawing.Size(75, 30);
-            this.btnSend.TabIndex = 1;
-            this.btnSend.Text = "手动发送";
-            this.btnSend.UseVisualStyleBackColor = true;
-            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
-            // 
-            // lblSendCount
-            // 
-            this.lblSendCount.AutoSize = true;
-            this.lblSendCount.Location = new System.Drawing.Point(184, 2);
-            this.lblSendCount.Name = "lblSendCount";
-            this.lblSendCount.Size = new System.Drawing.Size(14, 14);
-            this.lblSendCount.TabIndex = 8;
-            this.lblSendCount.Text = "0";
-            // 
-            // btnOpen
-            // 
-            this.btnOpen.Font = new System.Drawing.Font("宋体", 10F);
-            this.btnOpen.Location = new System.Drawing.Point(6, 22);
-            this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(89, 32);
-            this.btnOpen.TabIndex = 9;
-            this.btnOpen.Text = "打开串口";
-            this.btnOpen.UseVisualStyleBackColor = true;
-            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
-            // 
-            // lblSend
-            // 
-            this.lblSend.AutoSize = true;
-            this.lblSend.Location = new System.Drawing.Point(94, 1);
-            this.lblSend.Name = "lblSend";
-            this.lblSend.Size = new System.Drawing.Size(84, 14);
-            this.lblSend.TabIndex = 7;
-            this.lblSend.Text = "发送字节数:";
             // 
             // panel2
             // 
@@ -747,7 +656,6 @@
             this.skinTabPage6.BackColor = System.Drawing.Color.White;
             this.skinTabPage6.Controls.Add(this.skinGroupBox4);
             this.skinTabPage6.Controls.Add(this.skinGroupBox3);
-            this.skinTabPage6.Controls.Add(this.skinGroupBox38);
             this.skinTabPage6.Controls.Add(this.skinGroupBox35);
             this.skinTabPage6.Controls.Add(this.skinGroupBox34);
             this.skinTabPage6.Controls.Add(this.skinGroupBox33);
@@ -1105,260 +1013,17 @@
             this.label319.TabIndex = 249;
             this.label319.Text = "扫码；";
             // 
-            // skinGroupBox38
-            // 
-            this.skinGroupBox38.BackColor = System.Drawing.Color.White;
-            this.skinGroupBox38.BorderColor = System.Drawing.Color.Black;
-            this.skinGroupBox38.Controls.Add(this.DelayTime_textbox);
-            this.skinGroupBox38.Controls.Add(this.HoleNums_textbox);
-            this.skinGroupBox38.Controls.Add(this.TensionPower_textbox);
-            this.skinGroupBox38.Controls.Add(this.MoveSpeed_textbox);
-            this.skinGroupBox38.Controls.Add(this.TurnPagesNum_textbox);
-            this.skinGroupBox38.Controls.Add(this.GetThingSpeed_textBox);
-            this.skinGroupBox38.Controls.Add(this.EveryRowRealNum_textbox);
-            this.skinGroupBox38.Controls.Add(this.EmptyNums_textbox);
-            this.skinGroupBox38.Controls.Add(this.EveryRowProdution_textbox);
-            this.skinGroupBox38.Controls.Add(this.Online_textbox);
-            this.skinGroupBox38.Controls.Add(this.label370);
-            this.skinGroupBox38.Controls.Add(this.label371);
-            this.skinGroupBox38.Controls.Add(this.label372);
-            this.skinGroupBox38.Controls.Add(this.label373);
-            this.skinGroupBox38.Controls.Add(this.label374);
-            this.skinGroupBox38.Controls.Add(this.label375);
-            this.skinGroupBox38.Controls.Add(this.label376);
-            this.skinGroupBox38.Controls.Add(this.label377);
-            this.skinGroupBox38.Controls.Add(this.label378);
-            this.skinGroupBox38.Controls.Add(this.label379);
-            this.skinGroupBox38.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinGroupBox38.ForeColor = System.Drawing.Color.Black;
-            this.skinGroupBox38.Location = new System.Drawing.Point(13, 363);
-            this.skinGroupBox38.Name = "skinGroupBox38";
-            this.skinGroupBox38.RectBackColor = System.Drawing.Color.White;
-            this.skinGroupBox38.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinGroupBox38.Size = new System.Drawing.Size(563, 150);
-            this.skinGroupBox38.TabIndex = 194;
-            this.skinGroupBox38.TabStop = false;
-            this.skinGroupBox38.Text = "封装机";
-            this.skinGroupBox38.TitleBorderColor = System.Drawing.Color.White;
-            this.skinGroupBox38.TitleRectBackColor = System.Drawing.Color.White;
-            this.skinGroupBox38.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinGroupBox38.Visible = false;
-            // 
-            // DelayTime_textbox
-            // 
-            this.DelayTime_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DelayTime_textbox.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.DelayTime_textbox.Location = new System.Drawing.Point(100, 106);
-            this.DelayTime_textbox.Multiline = true;
-            this.DelayTime_textbox.Name = "DelayTime_textbox";
-            this.DelayTime_textbox.Size = new System.Drawing.Size(70, 29);
-            this.DelayTime_textbox.TabIndex = 237;
-            // 
-            // HoleNums_textbox
-            // 
-            this.HoleNums_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.HoleNums_textbox.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.HoleNums_textbox.Location = new System.Drawing.Point(16, 106);
-            this.HoleNums_textbox.Multiline = true;
-            this.HoleNums_textbox.Name = "HoleNums_textbox";
-            this.HoleNums_textbox.Size = new System.Drawing.Size(70, 29);
-            this.HoleNums_textbox.TabIndex = 236;
-            // 
-            // TensionPower_textbox
-            // 
-            this.TensionPower_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.TensionPower_textbox.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.TensionPower_textbox.Location = new System.Drawing.Point(356, 106);
-            this.TensionPower_textbox.Multiline = true;
-            this.TensionPower_textbox.Name = "TensionPower_textbox";
-            this.TensionPower_textbox.Size = new System.Drawing.Size(70, 29);
-            this.TensionPower_textbox.TabIndex = 236;
-            // 
-            // MoveSpeed_textbox
-            // 
-            this.MoveSpeed_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.MoveSpeed_textbox.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.MoveSpeed_textbox.Location = new System.Drawing.Point(266, 106);
-            this.MoveSpeed_textbox.Multiline = true;
-            this.MoveSpeed_textbox.Name = "MoveSpeed_textbox";
-            this.MoveSpeed_textbox.Size = new System.Drawing.Size(70, 29);
-            this.MoveSpeed_textbox.TabIndex = 235;
-            // 
-            // TurnPagesNum_textbox
-            // 
-            this.TurnPagesNum_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.TurnPagesNum_textbox.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.TurnPagesNum_textbox.Location = new System.Drawing.Point(265, 48);
-            this.TurnPagesNum_textbox.Multiline = true;
-            this.TurnPagesNum_textbox.Name = "TurnPagesNum_textbox";
-            this.TurnPagesNum_textbox.Size = new System.Drawing.Size(70, 29);
-            this.TurnPagesNum_textbox.TabIndex = 241;
-            // 
-            // GetThingSpeed_textBox
-            // 
-            this.GetThingSpeed_textBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.GetThingSpeed_textBox.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.GetThingSpeed_textBox.Location = new System.Drawing.Point(181, 106);
-            this.GetThingSpeed_textBox.Multiline = true;
-            this.GetThingSpeed_textBox.Name = "GetThingSpeed_textBox";
-            this.GetThingSpeed_textBox.Size = new System.Drawing.Size(70, 29);
-            this.GetThingSpeed_textBox.TabIndex = 235;
-            // 
-            // EveryRowRealNum_textbox
-            // 
-            this.EveryRowRealNum_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.EveryRowRealNum_textbox.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.EveryRowRealNum_textbox.Location = new System.Drawing.Point(181, 48);
-            this.EveryRowRealNum_textbox.Multiline = true;
-            this.EveryRowRealNum_textbox.Name = "EveryRowRealNum_textbox";
-            this.EveryRowRealNum_textbox.Size = new System.Drawing.Size(70, 29);
-            this.EveryRowRealNum_textbox.TabIndex = 240;
-            // 
-            // EmptyNums_textbox
-            // 
-            this.EmptyNums_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.EmptyNums_textbox.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.EmptyNums_textbox.Location = new System.Drawing.Point(356, 51);
-            this.EmptyNums_textbox.Multiline = true;
-            this.EmptyNums_textbox.Name = "EmptyNums_textbox";
-            this.EmptyNums_textbox.Size = new System.Drawing.Size(70, 29);
-            this.EmptyNums_textbox.TabIndex = 234;
-            // 
-            // EveryRowProdution_textbox
-            // 
-            this.EveryRowProdution_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.EveryRowProdution_textbox.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.EveryRowProdution_textbox.Location = new System.Drawing.Point(101, 48);
-            this.EveryRowProdution_textbox.Multiline = true;
-            this.EveryRowProdution_textbox.Name = "EveryRowProdution_textbox";
-            this.EveryRowProdution_textbox.Size = new System.Drawing.Size(70, 29);
-            this.EveryRowProdution_textbox.TabIndex = 239;
-            // 
-            // Online_textbox
-            // 
-            this.Online_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.Online_textbox.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Online_textbox.Location = new System.Drawing.Point(17, 48);
-            this.Online_textbox.Multiline = true;
-            this.Online_textbox.Name = "Online_textbox";
-            this.Online_textbox.Size = new System.Drawing.Size(70, 29);
-            this.Online_textbox.TabIndex = 238;
-            // 
-            // label370
-            // 
-            this.label370.AutoSize = true;
-            this.label370.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label370.Location = new System.Drawing.Point(364, 86);
-            this.label370.Name = "label370";
-            this.label370.Size = new System.Drawing.Size(35, 14);
-            this.label370.TabIndex = 214;
-            this.label370.Text = "张力";
-            // 
-            // label371
-            // 
-            this.label371.AutoSize = true;
-            this.label371.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label371.Location = new System.Drawing.Point(270, 86);
-            this.label371.Name = "label371";
-            this.label371.Size = new System.Drawing.Size(63, 14);
-            this.label371.TabIndex = 212;
-            this.label371.Text = "自动速度";
-            // 
-            // label372
-            // 
-            this.label372.AutoSize = true;
-            this.label372.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label372.Location = new System.Drawing.Point(101, 86);
-            this.label372.Name = "label372";
-            this.label372.Size = new System.Drawing.Size(63, 14);
-            this.label372.TabIndex = 208;
-            this.label372.Text = "感应延时";
-            // 
-            // label373
-            // 
-            this.label373.AutoSize = true;
-            this.label373.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label373.Location = new System.Drawing.Point(14, 86);
-            this.label373.Name = "label373";
-            this.label373.Size = new System.Drawing.Size(77, 14);
-            this.label373.TabIndex = 206;
-            this.label373.Text = "载带孔总数";
-            // 
-            // label374
-            // 
-            this.label374.AutoSize = true;
-            this.label374.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label374.Location = new System.Drawing.Point(183, 87);
-            this.label374.Name = "label374";
-            this.label374.Size = new System.Drawing.Size(63, 14);
-            this.label374.TabIndex = 204;
-            this.label374.Text = "拉料速率";
-            // 
-            // label375
-            // 
-            this.label375.AutoSize = true;
-            this.label375.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label375.Location = new System.Drawing.Point(361, 32);
-            this.label375.Name = "label375";
-            this.label375.Size = new System.Drawing.Size(49, 14);
-            this.label375.TabIndex = 202;
-            this.label375.Text = "空料数";
-            // 
-            // label376
-            // 
-            this.label376.AutoSize = true;
-            this.label376.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label376.Location = new System.Drawing.Point(269, 32);
-            this.label376.Name = "label376";
-            this.label376.Size = new System.Drawing.Size(49, 14);
-            this.label376.TabIndex = 200;
-            this.label376.Text = "翻面数";
-            // 
-            // label377
-            // 
-            this.label377.AutoSize = true;
-            this.label377.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label377.Location = new System.Drawing.Point(178, 32);
-            this.label377.Name = "label377";
-            this.label377.Size = new System.Drawing.Size(77, 14);
-            this.label377.TabIndex = 198;
-            this.label377.Text = "每卷实际量";
-            // 
-            // label378
-            // 
-            this.label378.AutoSize = true;
-            this.label378.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label378.Location = new System.Drawing.Point(95, 32);
-            this.label378.Name = "label378";
-            this.label378.Size = new System.Drawing.Size(77, 14);
-            this.label378.TabIndex = 196;
-            this.label378.Text = "每卷总产量";
-            // 
-            // label379
-            // 
-            this.label379.AutoSize = true;
-            this.label379.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label379.Location = new System.Drawing.Point(19, 32);
-            this.label379.Name = "label379";
-            this.label379.Size = new System.Drawing.Size(63, 14);
-            this.label379.TabIndex = 194;
-            this.label379.Text = "是否联机";
-            // 
             // skinGroupBox35
             // 
             this.skinGroupBox35.BackColor = System.Drawing.Color.White;
             this.skinGroupBox35.BorderColor = System.Drawing.Color.Black;
             this.skinGroupBox35.Controls.Add(this.JudgeModel_height_textbox);
             this.skinGroupBox35.Controls.Add(this.ScanPosition2_textbox);
-            this.skinGroupBox35.Controls.Add(this.CamPosition2_textbox);
             this.skinGroupBox35.Controls.Add(this.ScanPosition1_textbox);
             this.skinGroupBox35.Controls.Add(this.HandHeight_textbox);
             this.skinGroupBox35.Controls.Add(this.label335);
-            this.skinGroupBox35.Controls.Add(this.CamPosition1_textbox);
             this.skinGroupBox35.Controls.Add(this.label336);
             this.skinGroupBox35.Controls.Add(this.label327);
-            this.skinGroupBox35.Controls.Add(this.label334);
-            this.skinGroupBox35.Controls.Add(this.label333);
             this.skinGroupBox35.Controls.Add(this.label330);
             this.skinGroupBox35.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinGroupBox35.ForeColor = System.Drawing.Color.Black;
@@ -1394,16 +1059,6 @@
             this.ScanPosition2_textbox.Size = new System.Drawing.Size(70, 29);
             this.ScanPosition2_textbox.TabIndex = 239;
             // 
-            // CamPosition2_textbox
-            // 
-            this.CamPosition2_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.CamPosition2_textbox.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.CamPosition2_textbox.Location = new System.Drawing.Point(110, 51);
-            this.CamPosition2_textbox.Multiline = true;
-            this.CamPosition2_textbox.Name = "CamPosition2_textbox";
-            this.CamPosition2_textbox.Size = new System.Drawing.Size(70, 29);
-            this.CamPosition2_textbox.TabIndex = 241;
-            // 
             // ScanPosition1_textbox
             // 
             this.ScanPosition1_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1435,16 +1090,6 @@
             this.label335.Tag = "";
             this.label335.Text = "扫码位置2";
             // 
-            // CamPosition1_textbox
-            // 
-            this.CamPosition1_textbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.CamPosition1_textbox.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.CamPosition1_textbox.Location = new System.Drawing.Point(26, 51);
-            this.CamPosition1_textbox.Multiline = true;
-            this.CamPosition1_textbox.Name = "CamPosition1_textbox";
-            this.CamPosition1_textbox.Size = new System.Drawing.Size(70, 29);
-            this.CamPosition1_textbox.TabIndex = 240;
-            // 
             // label336
             // 
             this.label336.AutoSize = true;
@@ -1466,28 +1111,6 @@
             this.label327.TabIndex = 216;
             this.label327.Tag = "";
             this.label327.Text = "调模高度";
-            // 
-            // label334
-            // 
-            this.label334.AutoSize = true;
-            this.label334.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label334.Location = new System.Drawing.Point(115, 36);
-            this.label334.Name = "label334";
-            this.label334.Size = new System.Drawing.Size(70, 14);
-            this.label334.TabIndex = 219;
-            this.label334.Tag = "";
-            this.label334.Text = "相机位置2";
-            // 
-            // label333
-            // 
-            this.label333.AutoSize = true;
-            this.label333.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label333.Location = new System.Drawing.Point(24, 36);
-            this.label333.Name = "label333";
-            this.label333.Size = new System.Drawing.Size(70, 14);
-            this.label333.TabIndex = 217;
-            this.label333.Tag = "";
-            this.label333.Text = "相机位置1";
             // 
             // label330
             // 
@@ -2692,10 +2315,7 @@
             // 
             this.skinGroupBox29.BackColor = System.Drawing.Color.White;
             this.skinGroupBox29.BorderColor = System.Drawing.Color.Black;
-            this.skinGroupBox29.Controls.Add(this.label14);
-            this.skinGroupBox29.Controls.Add(this.label13);
             this.skinGroupBox29.Controls.Add(this.label306);
-            this.skinGroupBox29.Controls.Add(this.label11);
             this.skinGroupBox29.Controls.Add(this.label7);
             this.skinGroupBox29.Controls.Add(this.label344);
             this.skinGroupBox29.Controls.Add(this.label95);
@@ -2716,28 +2336,6 @@
             this.skinGroupBox29.TitleRectBackColor = System.Drawing.Color.White;
             this.skinGroupBox29.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(864, 19);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(17, 16);
-            this.label14.TabIndex = 263;
-            this.label14.Text = "0";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(839, 19);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(17, 16);
-            this.label13.TabIndex = 261;
-            this.label13.Text = "0";
-            // 
             // label306
             // 
             this.label306.AutoSize = true;
@@ -2748,16 +2346,6 @@
             this.label306.Size = new System.Drawing.Size(29, 12);
             this.label306.TabIndex = 243;
             this.label306.Text = "白班";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label11.Location = new System.Drawing.Point(808, 23);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(12, 12);
-            this.label11.TabIndex = 262;
-            this.label11.Text = "0";
             // 
             // label7
             // 
@@ -3745,7 +3333,7 @@
             this.skinTabControl1.PageNorml = null;
             this.skinTabControl1.PageNormlTxtColor = System.Drawing.Color.Silver;
             this.skinTabControl1.PageTextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.skinTabControl1.SelectedIndex = 2;
+            this.skinTabControl1.SelectedIndex = 0;
             this.skinTabControl1.Size = new System.Drawing.Size(897, 615);
             this.skinTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl1.TabIndex = 35;
@@ -3778,8 +3366,6 @@
             this.skinTabPage1.ResumeLayout(false);
             this.skinTabControl2.ResumeLayout(false);
             this.skinTabPage17.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -3789,8 +3375,6 @@
             this.skinGroupBox4.PerformLayout();
             this.skinGroupBox3.ResumeLayout(false);
             this.skinGroupBox3.PerformLayout();
-            this.skinGroupBox38.ResumeLayout(false);
-            this.skinGroupBox38.PerformLayout();
             this.skinGroupBox35.ResumeLayout(false);
             this.skinGroupBox35.PerformLayout();
             this.skinGroupBox34.ResumeLayout(false);
@@ -3849,11 +3433,6 @@
         private CCWin.SkinControl.SkinTabPage skinTabPage1;
         private CCWin.SkinControl.SkinTabControl skinTabControl2;
         private CCWin.SkinControl.SkinTabPage skinTabPage17;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btnSend;
-        private System.Windows.Forms.Label lblSendCount;
-        private System.Windows.Forms.Button btnOpen;
-        private System.Windows.Forms.Label lblSend;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtShowData;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -3883,39 +3462,14 @@
         private System.Windows.Forms.Label label319;
         private System.Windows.Forms.Label label310;
         private System.Windows.Forms.Label label298;
-        private CCWin.SkinControl.SkinGroupBox skinGroupBox38;
-        private System.Windows.Forms.TextBox DelayTime_textbox;
-        private System.Windows.Forms.TextBox HoleNums_textbox;
-        private System.Windows.Forms.TextBox TensionPower_textbox;
-        private System.Windows.Forms.TextBox MoveSpeed_textbox;
-        private System.Windows.Forms.TextBox TurnPagesNum_textbox;
-        private System.Windows.Forms.TextBox GetThingSpeed_textBox;
-        private System.Windows.Forms.TextBox EveryRowRealNum_textbox;
-        private System.Windows.Forms.TextBox EmptyNums_textbox;
-        private System.Windows.Forms.TextBox EveryRowProdution_textbox;
-        private System.Windows.Forms.TextBox Online_textbox;
-        private System.Windows.Forms.Label label370;
-        private System.Windows.Forms.Label label371;
-        private System.Windows.Forms.Label label372;
-        private System.Windows.Forms.Label label373;
-        private System.Windows.Forms.Label label374;
-        private System.Windows.Forms.Label label375;
-        private System.Windows.Forms.Label label376;
-        private System.Windows.Forms.Label label377;
-        private System.Windows.Forms.Label label378;
-        private System.Windows.Forms.Label label379;
         private CCWin.SkinControl.SkinGroupBox skinGroupBox35;
         private System.Windows.Forms.TextBox JudgeModel_height_textbox;
         private System.Windows.Forms.TextBox ScanPosition2_textbox;
-        private System.Windows.Forms.TextBox CamPosition2_textbox;
         private System.Windows.Forms.TextBox ScanPosition1_textbox;
         private System.Windows.Forms.TextBox HandHeight_textbox;
         private System.Windows.Forms.Label label335;
-        private System.Windows.Forms.TextBox CamPosition1_textbox;
         private System.Windows.Forms.Label label336;
         private System.Windows.Forms.Label label327;
-        private System.Windows.Forms.Label label334;
-        private System.Windows.Forms.Label label333;
         private System.Windows.Forms.Label label330;
         private CCWin.SkinControl.SkinGroupBox skinGroupBox34;
         private System.Windows.Forms.TextBox Get_thing_hight_textbox;
@@ -4009,9 +3563,6 @@
         private System.Windows.Forms.Label label318;
         private System.Windows.Forms.TextBox Scan_textbox;
         private CCWin.SkinControl.SkinGroupBox skinGroupBox29;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label95;
         private System.Windows.Forms.Label label92;

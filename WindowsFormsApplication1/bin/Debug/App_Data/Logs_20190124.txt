@@ -1,0 +1,25 @@
+2019-01-24 08:54:57,635 [9] INFO  loginfo - System.TypeInitializationException: “MathCollect.PcConnectPlc”的类型初始值设定项引发异常。 ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Modbus, Version=1.11.0.0, Culture=neutral, PublicKeyToken=b5aba55fcbc8d946”或它的某一个依赖项。系统找不到指定的文件。
+   在 MathCollect.PcConnectPlc..cctor()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 MathCollect.PcConnectPlc.OpenPortFxUsb()
+   在 WindowsFormsApplication1.Form1.Form1_Load(Object sender, EventArgs e) 位置 e:\GitHub\FUJIKONG2019.1.21\WindowsFormsApplication1\Form1.cs:行号 437
+2019-01-24 08:54:59,103 [9] INFO  loginfo - System.TypeInitializationException: “MathCollect.PcConnectPlc”的类型初始值设定项引发异常。 ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Modbus, Version=1.11.0.0, Culture=neutral, PublicKeyToken=b5aba55fcbc8d946”或它的某一个依赖项。系统找不到指定的文件。
+   在 MathCollect.PcConnectPlc..cctor()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 MathCollect.PcConnectPlc.Write_Data_FxUsb(String We, Int32 La)
+   在 WindowsFormsApplication1.Form1.Form1_Load(Object sender, EventArgs e) 位置 e:\GitHub\FUJIKONG2019.1.21\WindowsFormsApplication1\Form1.cs:行号 479
+2019-01-24 09:34:24,387 [10] INFO  loginfo - System.TypeInitializationException: “MathCollect.PcConnectPlc”的类型初始值设定项引发异常。 ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Modbus, Version=1.11.0.0, Culture=neutral, PublicKeyToken=b5aba55fcbc8d946”或它的某一个依赖项。系统找不到指定的文件。
+   在 MathCollect.PcConnectPlc..cctor()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 MathCollect.PcConnectPlc.OpenPortFxUsb()
+   在 WindowsFormsApplication1.Form1.Form1_Load(Object sender, EventArgs e) 位置 e:\GitHub\FUJIKONG2019.1.21\WindowsFormsApplication1\Form1.cs:行号 437
+2019-01-24 09:34:25,696 [10] INFO  loginfo - System.TypeInitializationException: “MathCollect.PcConnectPlc”的类型初始值设定项引发异常。 ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Modbus, Version=1.11.0.0, Culture=neutral, PublicKeyToken=b5aba55fcbc8d946”或它的某一个依赖项。系统找不到指定的文件。
+   在 MathCollect.PcConnectPlc..cctor()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 MathCollect.PcConnectPlc.Write_Data_FxUsb(String We, Int32 La)
+   在 WindowsFormsApplication1.Form1.Form1_Load(Object sender, EventArgs e) 位置 e:\GitHub\FUJIKONG2019.1.21\WindowsFormsApplication1\Form1.cs:行号 479
+2019-01-24 13:52:35,786 [10] INFO  loginfo - System.TypeInitializationException: “MathCollect.PcConnectPlc”的类型初始值设定项引发异常。 ---> System.IO.FileNotFoundException: 未能加载文件或程序集“Modbus, Version=1.11.0.0, Culture=neutral, PublicKeyToken=b5aba55fcbc8d946”或它的某一个依赖项。系统找不到指定的文件。
+   在 MathCollect.PcConnectPlc..cctor()
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 MathCollect.PcConnectPlc.OpenPortFxUsb()
+   在 WindowsFormsApplication1.Form1.Form1_Load(Object sender, EventArgs e) 位置 e:\GitHub\FUJIKONG2019.1.21\WindowsFormsApplication1\Form1.cs:行号 275
