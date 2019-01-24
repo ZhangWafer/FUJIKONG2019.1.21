@@ -2686,3 +2686,4 @@ E:\GitHub\FUJIKONG2019.1.21\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsA
 E:\GitHub\FUJIKONG2019.1.21\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
 E:\GitHub\FUJIKONG2019.1.21\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.exe
 E:\GitHub\FUJIKONG2019.1.21\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.pdb
+E:\GitHub\FUJIKONG2019.1.21\WindowsFormsApplication1\obj\x86\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache

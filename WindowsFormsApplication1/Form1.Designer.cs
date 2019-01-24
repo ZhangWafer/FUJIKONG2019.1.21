@@ -285,6 +285,7 @@
             this.label304 = new System.Windows.Forms.Label();
             this.label348 = new System.Windows.Forms.Label();
             this.skinTabControl1 = new CCWin.SkinControl.SkinTabControl();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.menuStrip1.SuspendLayout();
             this.skinGroupBox21.SuspendLayout();
             this.skinTabPage1.SuspendLayout();
@@ -3338,6 +3339,12 @@
             this.skinTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl1.TabIndex = 35;
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -3663,6 +3670,7 @@
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label36;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
 
     }
 }

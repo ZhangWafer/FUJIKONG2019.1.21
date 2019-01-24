@@ -11,6 +11,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -45,9 +46,6 @@ namespace WindowsFormsApplication1
 
         System.Diagnostics.Process p = new System.Diagnostics.Process(); //开启另外一个软件用的东西
 
-
-     
-
         string forbidden;
         //string path1="";
         int houjia = 0;
@@ -55,7 +53,7 @@ namespace WindowsFormsApplication1
         int liaohao;
 
         bool shenghe = false;
-        
+
         string Barcode = "";
         string Barcodeweizhi = "";
         string scmj = "";
@@ -63,7 +61,7 @@ namespace WindowsFormsApplication1
         string Mixture1 = "0";
         string smsj = "";
         string NG = "";
-       
+
         int tongxingplc = 0;
         string a4;
         bool PNL = false;
@@ -122,7 +120,7 @@ namespace WindowsFormsApplication1
         string value3;
         string value4;
 
-       
+
 
         bool Run = false; //运行
 
@@ -149,6 +147,7 @@ namespace WindowsFormsApplication1
         #endregion
 
         #region  串口
+
         /// <summary>
         /// 关闭串口
         /// </summary>
@@ -202,13 +201,11 @@ namespace WindowsFormsApplication1
             {
                 Directory.CreateDirectory(@"D:\Data");
             }
-
             if (Directory.Exists(@"D:\Data backup")) //判断是否有这个文件夹--E:\数据备份\
             {
                 if (Directory.Exists(@"D:\Data backup\\" + System.DateTime.Now.ToString("yyyyMMdd")))
                     //判断是否有这个文件夹--E:\数据备份\
                 {
-
 
                 }
                 else
@@ -393,7 +390,7 @@ namespace WindowsFormsApplication1
                     string[] lh6 = Regex.Split(msgS[7], ",", RegexOptions.IgnoreCase); //分割读取数组数值
                     shuliang = lh6[0]; //
                     Enum_textbox.Text = lh6[1]; //
-          
+
                     if (lh6[2] == "true")
                     {
                         radioButton11.Checked = true;
@@ -404,7 +401,7 @@ namespace WindowsFormsApplication1
                         radioButton11.Checked = false;
                         radioButton12.Checked = true;
                     }
-                   
+
 
 
                     End_btn.BackColor = Color.Green;
@@ -631,18 +628,18 @@ namespace WindowsFormsApplication1
                         ////PcConnectPlc.Write_Data_FxUsb("D2978", Convert.ToInt32(sArray20[5]));//间距18
 
                         param19_20.Text = (PLC_DS[100]/100f).ToString(); //写入
-                      
+
 
                         param20_21.Text = (PLC_DS[102]/100f).ToString(); //写入
 
                         Right_safePosition_textbox.Text = (PLC_DS[38]/48f).ToString(); //写入
-                        
+
 
                         Right_SLposition_textbox.Text = (PLC_DS[40]/48f).ToString();
-      
+
                         Right_ZMposition_textbox.Text = (PLC_DS[42]/48f).ToString();
                         //写入
-                        
+
 
                         //////  numericUpDown93.Value = Convert.ToDecimal(Convert.ToInt32(sArray21[4]) / 48f);//写入
                         Left_Chong_position_textbox.Text = (PLC_DS[44]/48f).ToString(); //写入
@@ -728,10 +725,10 @@ namespace WindowsFormsApplication1
 
             //msgS数组读取到的数据
             supe = msgS[3]; //超级密码
-          
-         
+
+
             bjrq = msgS[6]; //报警日期
-          
+
             scmj = msgS[8]; //上次模具
             jmtj = msgS[9]; //架摸调机
             smsj = msgS[10]; //扫码数据服务器
@@ -831,7 +828,7 @@ namespace WindowsFormsApplication1
 
                     gap17 = msgS[7]; //相机位置
                     string str23 = gap17;
-                 
+
 
                     //监控设定冲数，右安全位置，手臂高度
                     if (sArray17[1] != "0" && sArray17[1] != "" && sArray21[1] != "0" && sArray21[1] != "" &&
@@ -1017,7 +1014,7 @@ namespace WindowsFormsApplication1
                     showModelToForm(); //显示界面
 
                 }
-              
+
             }
             catch (Exception ex)
             {
@@ -1194,8 +1191,6 @@ namespace WindowsFormsApplication1
         //以上好坏板统计及是否计数暂停------------------------------------------
 
         #endregion
-
-
 
         #region 报警提示
 
@@ -1578,7 +1573,7 @@ namespace WindowsFormsApplication1
             if ((PLC_DS[24] != 0) && (RunningStation != PLC_DS[24]))
             {
                 //最新的信息显示在第一行
-               
+
                 try
                 {
                     //获取config信息
@@ -1751,7 +1746,7 @@ namespace WindowsFormsApplication1
         {
             //新建文档 写入数据
             List<string> msgL = new List<string>();
-           
+
             try
             {
                 FileOperate.OpenFileList(filePathNow, out msgL);
@@ -1888,171 +1883,7 @@ namespace WindowsFormsApplication1
             {
 
 
-                timer1.Enabled = false;
 
-                PLC_MS = PcConnectPlc.Read_Data_FxUsbS("M2880", 200); //M480 
-                PLC_DS = PcConnectPlc.Read_Data_FxUsbS("D2880", 200);
-
-                if (PLC_DS[13] != 0)
-                {
-                    Real_Chong_textbox.Text = PLC_DS[12].ToString(); //写入
-                    //PcConnectPlc.Write_Data_FxUsb("D2892", Convert.ToInt32(sArray17[0]));//实际冲数
-
-                    Set_Chong_textbox.Text = PLC_DS[13].ToString(); //写入
-                    //PcConnectPlc.Write_Data_FxUsb("D2893", Convert.ToInt32(sArray17[1]));//设定冲数
-                }
-
-                if (PLC_DS[13] == 0)
-                {
-                    tongxingplc = tongxingplc + 1;
-                    label7.Text = (tongxingplc).ToString();
-                    label92.Text = "通信待机";
-                }
-                else
-                {
-                    label92.Text = "通信正常";
-                }
-              
-
-                if (Run == true) //运行判断控制PLC
-                {
-
-                    string a3 = KD_Tiao_textbox.Text;
-                    Double a1 = Convert.ToDouble(a4);
-                    Double a2 = Convert.ToDouble(a3);
-                    if (a2 > 0)
-                    {
-                        if ((a2 >= a1) && PNL == false)
-                        {
-                            PcConnectPlc.Write_Data_FxUsb("M113", 1); //正常停机
-
-                            button42_Click(null, null); //停机
-
-                            //PNL = true;
-                        }
-                    }
-
-                    if (shenghe == false)
-                    {
-                        if (a33 == houjia)
-                        {
-                            PcConnectPlc.Write_Data_FxUsb("M113", 1); //正常停机
-
-                            houjia = houjia + 1;
-
-                        }
-
-                    }
-                }
-
-
-                if (PLC_MS[1] == 1)
-                {
-                    //左臂下料完成
-                    PcConnectPlc.Write_Data_FxUsb("M2881", 0);
-
-                    //触发扫描枪 扫描
-                 //   btnSend_Click(null, null);
-                }
-
-                if (saomatouk || saomatoug || saomatouh) //扫码头动作读数据
-                {
-                    Barcode = "";
-                    Mixture1 = "0";
-                    if (saomatouk) //给PLC发送数据,扫描ok完成.
-                    {
-                        PcConnectPlc.Write_Data_FxUsb("M2880", 1);
-
-                        PcConnectPlc.Write_Data_FxUsb("M2880", 0);
-
-
-                        //获取config信息
-                        string[] msgS = new string[500];
-                        string filePath = @"D:\Data backup\" + System.DateTime.Now.ToString("yyyyMMdd") + "\\pn.txt";
-                        FileOperate.OpenFileString(filePath, out msgS);
-
-                        msgS[0] = msgS[0].Insert(0, DateTime.Now.ToString() + "," + txtShowData.Text + "\r\n");
-
-                        FileOperate.SaveFileString(filePath, msgS);
-
-                        Barcode = txtShowData.Text; //发送数据到服务器
-                        NG = Barcode.Substring(0, Barcode.Length - 5);
-
-                        sm = sm + 1;
-                        label341.Text = sm.ToString();
-
-                        saomatouk = false;
-
-                    }
-                    if (saomatoug) //给PLC发送数据,扫描完成.未扫到码
-                    {
-
-                        Barcode = NG + "-NG"; //发送数据到服务器
-                        //获取config信息
-                        string[] msgS = new string[500];
-                        string filePath = @"D:\Data backup\" + System.DateTime.Now.ToString("yyyyMMdd") + "\\pn.txt";
-                        FileOperate.OpenFileString(filePath, out msgS);
-
-                        msgS[0] = msgS[0].Insert(0, DateTime.Now.ToString() + "," + txtShowData.Text + "\r\n");
-
-                        FileOperate.SaveFileString(filePath, msgS);
-
-                        sm1 = sm1 + 1;
-                        label342.Text = sm1.ToString();
-                        saomatoug = false;
-                    }
-                    if (saomatouh) //给PLC发送数据,扫描
-                    {
-                        //  MessageBox.Show("扫码不成功，请检查是否有混料！", "扫码不成功提示！");
-
-                        PcConnectPlc.Write_Data_FxUsb("M1058", 1);
-
-                        Mixture1 = "1";
-                        Barcode = txtShowData.Text; //发送数据到服务器
-
-
-
-
-                        List<string> msgL = new List<string>(); //存数据
-                        string filePath = @"D:\Data backup\" + System.DateTime.Now.ToString("yyyyMMdd") +
-                                          "\\Mixture.txt"; //打开根目录下的Auditor.TXT 路径
-                        FileOperate.OpenFileList(filePath, out msgL); //存储到数值中
-                        string[] Mold1 = new string[100];
-
-                        msgL[0] = msgL[0].Insert(0,
-                            DateTime.Now.ToString() + txtShowData.Text + "扫码不成功，请检查是否有混料！" + "\r\n");
-                        FileOperate.SaveFileList(filePath, msgL);
-                        msgL.Clear();
-
-
-                        sm2 = sm2 + 1;
-                        label343.Text = sm2.ToString();
-
-                        saomatouh = false;
-                    }
-
-
-                    if (PLC_DS[151] == 0) //判断是否开启方向扫描D3031
-                    {
-                        Barcodeweizhi = "" + "/" + ScanPosition1_textbox.Text;
-                    }
-                    else
-                    {
-                        Barcodeweizhi = ScanPosition1_textbox.Text + "/" + "";
-                    }
-                    string Para1 = "EQU_ID|DAY|SCAN_DATE|PARTNUM|BARCODE|LOCATE_XY|SET_NUM|REAL_NUM|IS_MIX";
-                    string Para2 = machineidentifier + "|" + System.DateTime.Now.ToString("yyyy/MM/dd") + "|" +
-                                   System.DateTime.Now.ToString("yyyyMMddHHmmss") + "|" + LH_textbox.Text + "|" +
-                                   Barcode +
-                                   "|" + Barcodeweizhi + "|" + Set_Chong_textbox.Text + "|" + Real_Chong_textbox.Text +
-                                   "|" + Mixture1;
-                    string ret = webFun.sendDataToSerGrp(barcodeAccount, barcodePwd, machineidentifier, "CX01", "CX01",
-                        Para1, Para2, System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
-
-                }
-                //w1.Stop();
-                //TimeSpan s1 = w1.Elapsed;
-                timer1.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -2096,7 +1927,7 @@ namespace WindowsFormsApplication1
                         Batch = PH_textbox.Text;
                         DataSet yy = webFun.getDataFromSer(serverAccount, serverPwd, "#01", "0001", "0009",
                             Batch + "|SFCZ1_ZD_PunchCut|" + Lay, System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
-                     
+
                         if (yy.Tables[0].Rows.Count > 0)
                         {
 
@@ -2232,7 +2063,7 @@ namespace WindowsFormsApplication1
             try
             {
                 timer4.Enabled = false;
-                if (saoma3 )
+                if (saoma3)
                 {
                     //if (skinGroupBox10.Text != "厂家-已登录")
                     if ((textBox32.Text.Length > 2) && (textBox32.Text != saoma2))
@@ -2283,7 +2114,7 @@ namespace WindowsFormsApplication1
                                                 DataSet yy = webFun.getDataFromSer(serverAccount, serverPwd, "#01",
                                                     "0001", "0009", Batch + "|SFCZ1_ZD_PunchCut|" + Lay,
                                                     System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
-                                             
+
                                                 if (yy.Tables[0].Rows.Count > 0)
                                                 {
 
@@ -2322,7 +2153,7 @@ namespace WindowsFormsApplication1
                                                                           System.DateTime.Now.ToString("yyyyMMdd") +
                                                                           "\\MoldNum match.txt"; //打开根目录下的Auditor.TXT 路径
                                                         FileOperate.OpenFileList(filePath, out msgL); //存储到数值中
-                                                      
+
                                                         msgL[0] = msgL[0].Insert(0,
                                                             DateTime.Now.ToString() + LastModel2_textBox.Text + "/" +
                                                             BOM_textbox.Text +
@@ -2814,7 +2645,7 @@ namespace WindowsFormsApplication1
 
                     }
                 }
-            
+
                 timer4.Enabled = true;
             }
             catch (Exception ex)
@@ -2999,7 +2830,7 @@ namespace WindowsFormsApplication1
                         PH_textbox.Text + "|SFCZ1_ZD_PunchCut|" + LayerNumber_textbox.Text,
                         DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
                     //                 //   第五步
-             
+
                     End_btn.BackColor = Color.Green;
                     Start_btn.Enabled = false;
                     End_btn.Enabled = true;
@@ -3534,12 +3365,12 @@ namespace WindowsFormsApplication1
                                 Audit_textBox.Text + "操作人员|" + Operater_textbox.Text + "审合人员|" + "\r\n"
                                 + JM_textbox.Text + "架模人员|" + label5.Text + "架模时间|" + TJ_textbox.Text + "调机人员|" +
                                 label6.Text + "调机时间|" + ChongNumber_textbox.Text + "冲数|" + "\r\n"
-                                + KD_Zhang_textbox.Text + "提取数PNL|" + ""+ "奥特母-每卷总量|" +
+                                + KD_Zhang_textbox.Text + "提取数PNL|" + "" + "奥特母-每卷总量|" +
                                 "" + "实际量|" +
                                 "" + "翻页面|" + "\r\n"
-                                +""+ "空料数|" + "" + "载带空数|" +
+                                + "" + "空料数|" + "" + "载带空数|" +
                                 "" + "感应延时|" +
-                               "" + "拉料速率|" + "\r\n"
+                                "" + "拉料速率|" + "\r\n"
                                 + "" + "自动速度|" + "" + "张力|" + label24.Text +
                                 "生产开始前检验张数|" +
                                 label341.Text + " - " + label342.Text + " - " + label343.Text + " - " + liaohao + "料号|"
@@ -3869,7 +3700,7 @@ namespace WindowsFormsApplication1
                 //时间机号显示
                 Scan_textbox.Text = txtShowData.Text;
 
-            
+
 
                 Machine_id_textbox.Text = machineidentifier; //机台编号
 
@@ -4069,14 +3900,233 @@ namespace WindowsFormsApplication1
             {
                 LogHelper.WriteLog(exception.ToString());
                 label95.Text = "通信待机";
- 
+
             }
 
 
         }
 
-  
 
+
+        #region  background后台线程工作方法
+
+        //这里就是通过响应消息，来处理界面的显示工作
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            switch (e.ProgressPercentage)
+            {
+                case 1:
+                    Real_Chong_textbox.Text = e.UserState.ToString();
+                    break;
+                case 2:
+                    Set_Chong_textbox.Text = e.UserState.ToString();
+                    break;
+                case 3:
+                    label7.Text = e.UserState.ToString();
+                    break;
+                case 4: 
+                    label92.Text = e.UserState.ToString();
+                    break;
+            }
+        }
+
+        //这里是后台工作完成后的消息处理，可以在这里进行后续的处理工作。
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            MessageBox.Show("运算终于完成了");
+        }
+
+        //这里，就是后台进程开始工作时，调用工作函数的地方。你可以把你现有的处理函数写在这儿。
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            while (true)
+            {
+                Thread.Sleep(100);
+                work(backgroundWorker1);
+                
+            }
+        }
+
+
+
+        //工作方法  读plc
+        private void work(BackgroundWorker bk)
+        {
+
+            try
+            {
+            PLC_MS = PcConnectPlc.Read_Data_FxUsbS("M2880", 200); //M480 
+            PLC_DS = PcConnectPlc.Read_Data_FxUsbS("D2880", 200);
+
+            if (PLC_DS[13] != 0)
+            {
+                bk.ReportProgress(1, PLC_DS[12].ToString());// Real_Chong_textbox.Text //实际冲数
+                bk.ReportProgress(2, PLC_DS[13].ToString()); //写入//设定冲数 Set_Chong_textbox.Text
+            }
+
+            if (PLC_DS[13] == 0)
+            {
+                tongxingplc = tongxingplc + 1;
+                bk.ReportProgress(3, tongxingplc.ToString());
+                bk.ReportProgress(4, "通信待机");
+               
+                ///////////////////////////////1.24晚上改到这里
+            }
+            else
+            {
+                label92.Text = "通信正常";
+            }
+
+
+            if (Run == true) //运行判断控制PLC
+            {
+
+                string a3 = KD_Tiao_textbox.Text;
+                Double a1 = Convert.ToDouble(a4);
+                Double a2 = Convert.ToDouble(a3);
+                if (a2 > 0)
+                {
+                    if ((a2 >= a1) && PNL == false)
+                    {
+                        PcConnectPlc.Write_Data_FxUsb("M113", 1); //正常停机
+
+                        button42_Click(null, null); //停机
+
+                        //PNL = true;
+                    }
+                }
+
+                if (shenghe == false)
+                {
+                    if (a33 == houjia)
+                    {
+                        PcConnectPlc.Write_Data_FxUsb("M113", 1); //正常停机
+
+                        houjia = houjia + 1;
+
+                    }
+
+                }
+            }
+
+
+            if (PLC_MS[1] == 1)
+            {
+                //左臂下料完成
+                PcConnectPlc.Write_Data_FxUsb("M2881", 0);
+
+                //触发扫描枪 扫描
+                //   btnSend_Click(null, null);
+            }
+
+            if (saomatouk || saomatoug || saomatouh) //扫码头动作读数据
+            {
+                Barcode = "";
+                Mixture1 = "0";
+                if (saomatouk) //给PLC发送数据,扫描ok完成.
+                {
+                    PcConnectPlc.Write_Data_FxUsb("M2880", 1);
+
+                    PcConnectPlc.Write_Data_FxUsb("M2880", 0);
+
+
+                    //获取config信息
+                    string[] msgS = new string[500];
+                    string filePath = @"D:\Data backup\" + System.DateTime.Now.ToString("yyyyMMdd") + "\\pn.txt";
+                    FileOperate.OpenFileString(filePath, out msgS);
+
+                    msgS[0] = msgS[0].Insert(0, DateTime.Now.ToString() + "," + txtShowData.Text + "\r\n");
+
+                    FileOperate.SaveFileString(filePath, msgS);
+
+                    Barcode = txtShowData.Text; //发送数据到服务器
+                    NG = Barcode.Substring(0, Barcode.Length - 5);
+
+                    sm = sm + 1;
+                    label341.Text = sm.ToString();
+
+                    saomatouk = false;
+
+                }
+                if (saomatoug) //给PLC发送数据,扫描完成.未扫到码
+                {
+
+                    Barcode = NG + "-NG"; //发送数据到服务器
+                    //获取config信息
+                    string[] msgS = new string[500];
+                    string filePath = @"D:\Data backup\" + System.DateTime.Now.ToString("yyyyMMdd") + "\\pn.txt";
+                    FileOperate.OpenFileString(filePath, out msgS);
+
+                    msgS[0] = msgS[0].Insert(0, DateTime.Now.ToString() + "," + txtShowData.Text + "\r\n");
+
+                    FileOperate.SaveFileString(filePath, msgS);
+
+                    sm1 = sm1 + 1;
+                    label342.Text = sm1.ToString();
+                    saomatoug = false;
+                }
+                if (saomatouh) //给PLC发送数据,扫描
+                {
+                    //  MessageBox.Show("扫码不成功，请检查是否有混料！", "扫码不成功提示！");
+
+                    PcConnectPlc.Write_Data_FxUsb("M1058", 1);
+
+                    Mixture1 = "1";
+                    Barcode = txtShowData.Text; //发送数据到服务器
+
+
+
+
+                    List<string> msgL = new List<string>(); //存数据
+                    string filePath = @"D:\Data backup\" + System.DateTime.Now.ToString("yyyyMMdd") +
+                                      "\\Mixture.txt"; //打开根目录下的Auditor.TXT 路径
+                    FileOperate.OpenFileList(filePath, out msgL); //存储到数值中
+                    string[] Mold1 = new string[100];
+
+                    msgL[0] = msgL[0].Insert(0,
+                        DateTime.Now.ToString() + txtShowData.Text + "扫码不成功，请检查是否有混料！" + "\r\n");
+                    FileOperate.SaveFileList(filePath, msgL);
+                    msgL.Clear();
+
+
+                    sm2 = sm2 + 1;
+                    label343.Text = sm2.ToString();
+
+                    saomatouh = false;
+                }
+
+
+                if (PLC_DS[151] == 0) //判断是否开启方向扫描D3031
+                {
+                    Barcodeweizhi = "" + "/" + ScanPosition1_textbox.Text;
+                }
+                else
+                {
+                    Barcodeweizhi = ScanPosition1_textbox.Text + "/" + "";
+                }
+                string Para1 = "EQU_ID|DAY|SCAN_DATE|PARTNUM|BARCODE|LOCATE_XY|SET_NUM|REAL_NUM|IS_MIX";
+                string Para2 = machineidentifier + "|" + System.DateTime.Now.ToString("yyyy/MM/dd") + "|" +
+                               System.DateTime.Now.ToString("yyyyMMddHHmmss") + "|" + LH_textbox.Text + "|" +
+                               Barcode +
+                               "|" + Barcodeweizhi + "|" + Set_Chong_textbox.Text + "|" + Real_Chong_textbox.Text +
+                               "|" + Mixture1;
+                string ret = webFun.sendDataToSerGrp(barcodeAccount, barcodePwd, machineidentifier, "CX01", "CX01",
+                    Para1, Para2, System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss"));
+
+            }
+            //w1.Stop();
+            //TimeSpan s1 = w1.Elapsed;
+            }
+            catch (Exception ex)
+            {
+
+                LogHelper.WriteLog(ex.ToString());
+            }
+        }
+
+        #endregion
 
     }
 }
