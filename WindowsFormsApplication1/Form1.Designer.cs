@@ -33,7 +33,6 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -52,17 +51,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.timer4 = new System.Windows.Forms.Timer(this.components);
-            this.skinTabPage1 = new CCWin.SkinControl.SkinTabPage();
-            this.skinTabControl2 = new CCWin.SkinControl.SkinTabControl();
-            this.skinTabPage17 = new CCWin.SkinControl.SkinTabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtShowData = new System.Windows.Forms.TextBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label340 = new System.Windows.Forms.Label();
-            this.label339 = new System.Windows.Forms.Label();
-            this.lblRevCount = new System.Windows.Forms.Label();
-            this.lblRev = new System.Windows.Forms.Label();
-            this.chkAutoLine = new System.Windows.Forms.CheckBox();
             this.skinTabPage6 = new CCWin.SkinControl.SkinTabPage();
             this.skinGroupBox4 = new CCWin.SkinControl.SkinGroupBox();
             this.label27 = new System.Windows.Forms.Label();
@@ -288,11 +276,6 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.menuStrip1.SuspendLayout();
             this.skinGroupBox21.SuspendLayout();
-            this.skinTabPage1.SuspendLayout();
-            this.skinTabControl2.SuspendLayout();
-            this.skinTabPage17.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.skinTabPage6.SuspendLayout();
             this.skinGroupBox4.SuspendLayout();
             this.skinGroupBox3.SuspendLayout();
@@ -320,12 +303,8 @@
             // 
             // timer1
             // 
+            this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // timer2
-            // 
-            this.timer2.Interval = 1000;
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // imageList1
             // 
@@ -516,141 +495,6 @@
             // 
             this.timer4.Interval = 1000;
             this.timer4.Tick += new System.EventHandler(this.timer4_Tick);
-            // 
-            // skinTabPage1
-            // 
-            this.skinTabPage1.BackColor = System.Drawing.Color.White;
-            this.skinTabPage1.BorderColor = System.Drawing.Color.White;
-            this.skinTabPage1.Controls.Add(this.skinTabControl2);
-            this.skinTabPage1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.skinTabPage1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
-            this.skinTabPage1.ForeColor = System.Drawing.Color.Black;
-            this.skinTabPage1.Location = new System.Drawing.Point(0, 75);
-            this.skinTabPage1.Name = "skinTabPage1";
-            this.skinTabPage1.Size = new System.Drawing.Size(897, 540);
-            this.skinTabPage1.TabIndex = 0;
-            this.skinTabPage1.TabItemImage = global::WindowsFormsApplication1.Properties.Resources.myBitmap15;
-            this.skinTabPage1.Text = " 调试界面";
-            // 
-            // skinTabControl2
-            // 
-            this.skinTabControl2.AnimatorType = CCWin.SkinControl.AnimationType.HorizSlide;
-            this.skinTabControl2.BackColor = System.Drawing.Color.Silver;
-            this.skinTabControl2.CloseRect = new System.Drawing.Rectangle(2, 2, 12, 12);
-            this.skinTabControl2.Controls.Add(this.skinTabPage17);
-            this.skinTabControl2.Enabled = false;
-            this.skinTabControl2.HeadBack = null;
-            this.skinTabControl2.ImgTxtOffset = new System.Drawing.Point(0, 0);
-            this.skinTabControl2.ItemSize = new System.Drawing.Size(70, 36);
-            this.skinTabControl2.Location = new System.Drawing.Point(11, 198);
-            this.skinTabControl2.Name = "skinTabControl2";
-            this.skinTabControl2.PageArrowDown = ((System.Drawing.Image)(resources.GetObject("skinTabControl2.PageArrowDown")));
-            this.skinTabControl2.PageArrowHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl2.PageArrowHover")));
-            this.skinTabControl2.PageCloseHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl2.PageCloseHover")));
-            this.skinTabControl2.PageCloseNormal = ((System.Drawing.Image)(resources.GetObject("skinTabControl2.PageCloseNormal")));
-            this.skinTabControl2.PageDown = ((System.Drawing.Image)(resources.GetObject("skinTabControl2.PageDown")));
-            this.skinTabControl2.PageHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl2.PageHover")));
-            this.skinTabControl2.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
-            this.skinTabControl2.PageNorml = null;
-            this.skinTabControl2.SelectedIndex = 0;
-            this.skinTabControl2.Size = new System.Drawing.Size(885, 332);
-            this.skinTabControl2.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.skinTabControl2.TabIndex = 87;
-            // 
-            // skinTabPage17
-            // 
-            this.skinTabPage17.BackColor = System.Drawing.Color.White;
-            this.skinTabPage17.BorderColor = System.Drawing.Color.Maroon;
-            this.skinTabPage17.Controls.Add(this.panel2);
-            this.skinTabPage17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage17.Location = new System.Drawing.Point(0, 36);
-            this.skinTabPage17.Name = "skinTabPage17";
-            this.skinTabPage17.Size = new System.Drawing.Size(885, 296);
-            this.skinTabPage17.TabIndex = 13;
-            this.skinTabPage17.TabItemImage = null;
-            this.skinTabPage17.Text = "通信";
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.txtShowData);
-            this.panel2.Controls.Add(this.groupBox2);
-            this.panel2.Location = new System.Drawing.Point(9, -3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(342, 183);
-            this.panel2.TabIndex = 53;
-            // 
-            // txtShowData
-            // 
-            this.txtShowData.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtShowData.Location = new System.Drawing.Point(0, 46);
-            this.txtShowData.Multiline = true;
-            this.txtShowData.Name = "txtShowData";
-            this.txtShowData.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtShowData.Size = new System.Drawing.Size(342, 129);
-            this.txtShowData.TabIndex = 1;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.groupBox2.Controls.Add(this.label340);
-            this.groupBox2.Controls.Add(this.label339);
-            this.groupBox2.Controls.Add(this.lblRevCount);
-            this.groupBox2.Controls.Add(this.lblRev);
-            this.groupBox2.Controls.Add(this.chkAutoLine);
-            this.groupBox2.Font = new System.Drawing.Font("宋体", 10F);
-            this.groupBox2.Location = new System.Drawing.Point(-1, 6);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(341, 41);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "数据接收区";
-            // 
-            // label340
-            // 
-            this.label340.AutoSize = true;
-            this.label340.Location = new System.Drawing.Point(179, 22);
-            this.label340.Name = "label340";
-            this.label340.Size = new System.Drawing.Size(0, 14);
-            this.label340.TabIndex = 137;
-            // 
-            // label339
-            // 
-            this.label339.AutoSize = true;
-            this.label339.Location = new System.Drawing.Point(99, 20);
-            this.label339.Name = "label339";
-            this.label339.Size = new System.Drawing.Size(0, 14);
-            this.label339.TabIndex = 8;
-            // 
-            // lblRevCount
-            // 
-            this.lblRevCount.AutoSize = true;
-            this.lblRevCount.Location = new System.Drawing.Point(189, 0);
-            this.lblRevCount.Name = "lblRevCount";
-            this.lblRevCount.Size = new System.Drawing.Size(14, 14);
-            this.lblRevCount.TabIndex = 7;
-            this.lblRevCount.Text = "0";
-            // 
-            // lblRev
-            // 
-            this.lblRev.AutoSize = true;
-            this.lblRev.Location = new System.Drawing.Point(99, 0);
-            this.lblRev.Name = "lblRev";
-            this.lblRev.Size = new System.Drawing.Size(84, 14);
-            this.lblRev.TabIndex = 6;
-            this.lblRev.Text = "接收字节数:";
-            // 
-            // chkAutoLine
-            // 
-            this.chkAutoLine.AutoSize = true;
-            this.chkAutoLine.Location = new System.Drawing.Point(6, 16);
-            this.chkAutoLine.Name = "chkAutoLine";
-            this.chkAutoLine.Size = new System.Drawing.Size(82, 18);
-            this.chkAutoLine.TabIndex = 1;
-            this.chkAutoLine.Text = "自动换行";
-            this.chkAutoLine.UseVisualStyleBackColor = true;
             // 
             // skinTabPage6
             // 
@@ -3311,7 +3155,6 @@
             this.skinTabControl1.CloseRect = new System.Drawing.Rectangle(2, 2, 12, 12);
             this.skinTabControl1.Controls.Add(this.skinTabPage22);
             this.skinTabControl1.Controls.Add(this.skinTabPage6);
-            this.skinTabControl1.Controls.Add(this.skinTabPage1);
             this.skinTabControl1.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.skinTabControl1.HeadBack = null;
             this.skinTabControl1.HotTrack = true;
@@ -3370,13 +3213,6 @@
             this.menuStrip1.PerformLayout();
             this.skinGroupBox21.ResumeLayout(false);
             this.skinGroupBox21.PerformLayout();
-            this.skinTabPage1.ResumeLayout(false);
-            this.skinTabControl2.ResumeLayout(false);
-            this.skinTabPage17.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.skinTabPage6.ResumeLayout(false);
             this.skinGroupBox4.ResumeLayout(false);
             this.skinGroupBox4.PerformLayout();
@@ -3418,7 +3254,6 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -3437,17 +3272,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Timer timer4;
-        private CCWin.SkinControl.SkinTabPage skinTabPage1;
-        private CCWin.SkinControl.SkinTabControl skinTabControl2;
-        private CCWin.SkinControl.SkinTabPage skinTabPage17;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtShowData;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label340;
-        private System.Windows.Forms.Label label339;
-        private System.Windows.Forms.Label lblRevCount;
-        private System.Windows.Forms.Label lblRev;
-        private System.Windows.Forms.CheckBox chkAutoLine;
         private CCWin.SkinControl.SkinTabPage skinTabPage6;
         private System.Windows.Forms.TextBox KeepNums_textbox;
         private System.Windows.Forms.TextBox KnifeLength_textbox;
